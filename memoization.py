@@ -10,8 +10,14 @@ def fib(x):
     return fib(x-2) + fib(x-1)
 
 
-def fib_memo(x, cache: list = None):
-    """Calculate fibonacci using recursion with memoization."""
+def fib_memo(x: int, cache: list = None):
+    """Calculate fibonacci using recursion with memoization.
+    Args:
+        x: number for calculation
+        cache: list with values where cache[x] = fib_memo(x)
+
+    Return: fib_memo(x, cache) or 0 or 1
+    """
     if x == 0:
         return 0
     if x == 1:
@@ -30,7 +36,7 @@ if __name__ == '__main__':
     for f in [fib, fib_memo]:
 
         start = time.time()
-        xx = 25
+        xx = 4
         fibonacci = f(xx)
 
         stop = round(time.time()-start, 4)  # seconds with round 4 numbers after float

@@ -4,7 +4,7 @@ def bin_search(n: int, lst: list) -> int:
     Note: list should be sorted.
 
     Args:
-        n: int - required number
+        n: required number
         lst: sorted list on numbers.
     Returns:
         index of x in list is present or -1
